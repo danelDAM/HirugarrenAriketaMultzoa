@@ -1,0 +1,184 @@
+﻿<Window x:Class="dietak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dieten kalkulua"
+        Height="350"
+        Width="560"
+        PreviewKeyDown="Window_PreviewKeyDown">
+
+    <Grid>
+
+        <GroupBox Header="Dietak"
+                  Margin="20,20,0,0"
+                  Width="140"
+                  Height="110"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+
+            <StackPanel Margin="10">
+
+                <CheckBox x:Name="chkGosaria"
+                          Content="Gosaria"
+                          Margin="0,5"
+                          Checked="Dieta_Changed"
+                          Unchecked="Dieta_Changed"/>
+
+                <CheckBox x:Name="chkBazkaria"
+                          Content="Bazkaria"
+                          Margin="0,5"
+                          Checked="Dieta_Changed"
+                          Unchecked="Dieta_Changed"/>
+
+                <CheckBox x:Name="chkAfaria"
+                          Content="Afaria"
+                          Margin="0,5"
+                          Checked="Dieta_Changed"
+                          Unchecked="Dieta_Changed"/>
+
+            </StackPanel>
+
+        </GroupBox>
+
+
+        <GroupBox Header="Bidaiak"
+                  Margin="180,20,0,0"
+                  Width="160"
+                  Height="110"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+
+            <Grid>
+
+                <Label Content="KM"
+                       Margin="10,15,0,0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"/>
+
+                <TextBox x:Name="txtKm"
+                         Width="60"
+                         Height="25"
+                         Margin="70,12,0,0"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Top"
+                         TextChanged="Datuak_Changed"/>
+
+
+                <Label Content="Orduak"
+                       Margin="10,55,0,0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"/>
+
+                <TextBox x:Name="txtBidaiOrduak"
+                         Width="60"
+                         Height="25"
+                         Margin="70,52,0,0"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Top"
+                         TextChanged="Datuak_Changed"/>
+
+            </Grid>
+
+        </GroupBox>
+
+
+        <GroupBox Header="Lana"
+                  Margin="360,20,0,0"
+                  Width="140"
+                  Height="110"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+
+            <Grid>
+
+                <Label Content="Orduak"
+                       Margin="10,20,0,0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"/>
+
+                <TextBox x:Name="txtLanOrduak"
+                         Width="50"
+                         Height="25"
+                         Margin="75,18,0,0"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Top"
+                         TextChanged="Datuak_Changed"/>
+
+            </Grid>
+
+        </GroupBox>
+
+
+        <Separator Margin="40,150,40,0"
+                   Height="2"
+                   VerticalAlignment="Top"/>
+
+
+
+        <TextBox x:Name="txtDietak"
+                 Width="90"
+                 Height="25"
+                 Margin="40,180,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 IsReadOnly="True"/>
+
+        <TextBox x:Name="txtBidaiak"
+                 Width="90"
+                 Height="25"
+                 Margin="200,180,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 IsReadOnly="True"/>
+
+        <TextBox x:Name="txtLana"
+                 Width="90"
+                 Height="25"
+                 Margin="360,180,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 IsReadOnly="True"/>
+
+
+        <Separator Margin="40,225,40,0"
+                   Height="2"
+                   VerticalAlignment="Top"/>
+
+
+        <Button x:Name="btnGarbitu"
+                Content="Garbitu"
+                Width="90"
+                Height="35"
+                Margin="40,255,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="btnGarbitu_Click"/>
+
+
+        <Button x:Name="btnIrten"
+                Content="Irten"
+                Width="90"
+                Height="35"
+                Margin="180,255,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="btnIrten_Click"/>
+
+
+        <Label Content="GUZTIRA"
+               FontSize="20"
+               FontWeight="Bold"
+               Margin="290,255,0,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"/>
+
+        <TextBox x:Name="txtGuztira"
+                 Width="100"
+                 Height="30"
+                 Margin="410,255,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 IsReadOnly="True"/>
+
+    </Grid>
+
+</Window>
